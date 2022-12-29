@@ -1,0 +1,10 @@
+# ninja log v5
+10	1344	6939890800760323	build.ninja	c193f9919aa80a08
+4	3811	6939890833108900	QrCodeTeamShawal_autogen/timestamp	4f3419bb609e309a
+4	3811	6939890833108900	QrCodeTeamShawal_autogen/mocs_compilation.cpp	4f3419bb609e309a
+4	3811	6939890833108900	D:/Qt Creator/qrcodeTeamShawal/build-QrCodeTeamShawal-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/QrCodeTeamShawal_autogen/timestamp	4f3419bb609e309a
+4	3811	6939890833108900	D:/Qt Creator/qrcodeTeamShawal/build-QrCodeTeamShawal-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/QrCodeTeamShawal_autogen/mocs_compilation.cpp	4f3419bb609e309a
+3854	12778	6939890929488057	CMakeFiles/QrCodeTeamShawal.dir/main.cpp.obj	2a9e9ba4866a6296
+3813	12790	6939890929508079	CMakeFiles/QrCodeTeamShawal.dir/QrCodeTeamShawal_autogen/mocs_compilation.cpp.obj	112c77d46722e99e
+3832	12824	6939890929958071	CMakeFiles/QrCodeTeamShawal.dir/mainwindow.cpp.obj	960d08035169168a
+12825	13528	6939890936889277	QrCodeTeamShawal.exe	1a8926eb545c5dc9
