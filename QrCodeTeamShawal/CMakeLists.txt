@@ -20,6 +20,7 @@ set(PROJECT_SOURCES
         generate.h
         writer.h
         reader.h
+        MultiFormatWriter.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
