@@ -20,7 +20,13 @@ set(PROJECT_SOURCES
         generate.h
         writer.h
         reader.h
-        MultiFormatWriter.h
+        qrcodegen.cpp
+        qrcodegen.hpp
+        app_options.hpp
+        qrcodegen.hpp
+        png_gen.hpp
+        qrcode.h
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

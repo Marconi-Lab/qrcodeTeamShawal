@@ -3,16 +3,47 @@
 #define GENERATE_H
 
 //include header files
-#include "..\zxing-cpp\core\src\MultiFormatWriter.h"
-/*****************************************************************************************************************
- * To write barcodes:
- * As an example, have a look at [`ZXingWriter.cpp`](example/ZXingWriter.cpp).
- * 1. Create a [`MultiFormatWriter`](core/src/MultiFormatWriter.h) instance with the format you want to generate.
- *      Set encoding and margins if needed.
- * 2. Call `encode()` with text content and the image size. This returns a [`BitMatrix`](core/src/BitMatrix.h)
- *      which is a binary image of the barcode where `true` == visual black and `false` == visual white.
- * 3. Convert the bit matrix to your native image format. See also the `ToMatrix<T>(BitMatrix&)` helper function.
-*******************************************************************************************************************/
+//#include "app_options.hpp"
+
+#include "qrcode_gen.hpp"
+#include "png_gen.hpp"
+#include "qrcode.h"
+
+#include <string>
+#include <iostream>
+
+bool app_run(int argc, char *argv[])
+{
+    //AppOptions options(argc, argv);
+    std::string qr_string = "Shawal Mbalire";
+    //if (options)
+    {
+        // Process the input arguments
+        QRcodeGen gen(options.getVersion().second, options.getEccType().second);
+        gen.init(8);
+
+        PngGen png;
+        png.setFileName("qr_code.png");
+
+        // Generate QR code
+        bool res = gen.generate(qr_string);
+        if (!res)
+        {
+            std::cout << "Failed to generate qrcode\n";
+            return false;
+        }
+
+        // Getr the QR code image and convert it to PNG
+        res = png.compressPng(gen.getImage());
+        if (!res)
+        {
+            std::cout << "Failed to generate png\n";
+            return false;
+        }
+    }
+
+    return true;
+}
 
 //end of header file
 #endif
